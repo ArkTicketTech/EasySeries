@@ -1,0 +1,15 @@
+<%= form_for :ad, url: ads_path do |f| %>
+  <p>
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </p>
+ 
+  <p>
+    <%= f.label :img %><br>
+    <%= f.text_field :img %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
