@@ -9,6 +9,7 @@ class CreateEpisodes < ActiveRecord::Migration
       t.string :url_2
       t.string :url_3
       t.string :size
+      t.integer :episode_num
       t.references :serie, index: true, foreign_key: true
 
       t.timestamps null: false
