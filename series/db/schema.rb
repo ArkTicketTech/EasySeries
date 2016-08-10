@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808162438) do
+ActiveRecord::Schema.define(version: 20160810121049) do
 
   create_table "ads", force: :cascade do |t|
     t.string   "url"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20160808162438) do
     t.text     "describe"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "series", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "playtime"
+    t.integer  "playtime_qiniu"
+    t.integer  "series_count"
+    t.string   "img"
+    t.integer  "play_condition"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end

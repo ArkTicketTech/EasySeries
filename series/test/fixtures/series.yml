@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  playtime: 1
+  playtime_qiniu: 1
+  series_count: 1
+  img: MyString
+  play_condition: 1
+
+two:
+  name: MyString
+  playtime: 1
+  playtime_qiniu: 1
+  series_count: 1
+  img: MyString
+  play_condition: 1
