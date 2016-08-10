@@ -9,6 +9,7 @@ one:
   url_2: MyString
   url_3: MyString
   size: MyString
+  episode_num: 1
   serie_id: 
 
 two:
@@ -20,4 +21,5 @@ two:
   url_2: MyString
   url_3: MyString
   size: MyString
+  episode_num: 1
   serie_id: 
