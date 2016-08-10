@@ -4,22 +4,20 @@ one:
   name: MyString
   playtime: 1
   playtime_qiniu: 1
-  series_count: 1
-  img: MyString
-  douban_url: MyString
+  play_condition: 1
+  url_1: MyString
+  url_2: MyString
+  url_3: MyString
   size: MyString
-  global_weight: 1
-  featured_weight: 1
-  type: 
+  serie_id: 
 
 two:
   name: MyString
   playtime: 1
   playtime_qiniu: 1
-  series_count: 1
-  img: MyString
-  douban_url: MyString
+  play_condition: 1
+  url_1: MyString
+  url_2: MyString
+  url_3: MyString
   size: MyString
-  global_weight: 1
-  featured_weight: 1
-  type: 
+  serie_id: 

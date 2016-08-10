@@ -6,7 +6,11 @@ class CreateSeries < ActiveRecord::Migration
       t.integer :playtime_qiniu
       t.integer :series_count
       t.string :img
-      t.integer :play_condition
+      t.string :douban_url
+      t.string :size
+      t.integer :global_weight
+      t.integer :featured_weight
+      t.string :type
 
       t.timestamps null: false
     end

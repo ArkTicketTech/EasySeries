@@ -56,5 +56,8 @@ Rails.application.routes.draw do
 
   resources :ads
   resources :series
-
+  resources :articles do
+    resources :episodes
+  end
+  
 end

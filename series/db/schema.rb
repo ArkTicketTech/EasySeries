@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160810121049) do
+ActiveRecord::Schema.define(version: 20160810124352) do
 
   create_table "ads", force: :cascade do |t|
     t.string   "url"
@@ -23,15 +23,35 @@ ActiveRecord::Schema.define(version: 20160810121049) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "episodes", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "playtime"
+    t.integer  "playtime_qiniu"
+    t.integer  "play_condition"
+    t.string   "url_1"
+    t.string   "url_2"
+    t.string   "url_3"
+    t.string   "size"
+    t.integer  "serie_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "episodes", ["serie_id"], name: "index_episodes_on_serie_id"
+
   create_table "series", force: :cascade do |t|
     t.string   "name"
     t.integer  "playtime"
     t.integer  "playtime_qiniu"
     t.integer  "series_count"
     t.string   "img"
-    t.integer  "play_condition"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "douban_url"
+    t.string   "size"
+    t.integer  "global_weight"
+    t.integer  "featured_weight"
+    t.string   "type"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
