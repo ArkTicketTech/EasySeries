@@ -57,10 +57,16 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
+  get '/ads/get_info' => 'ads#get_ad_info'
+  get '/series/sort_by_globalweight' => 'series#sort_by_globalweight'
+  get '/series/sort_by_featuredweight' => 'series#sort_by_featuredweight'
+  get '/series/get_all' => 'series#get_all_series'
+  get '/episodes_of_serie/:serie_id' => 'episodes#episodes_of_serie'
   resources :ads
   resources :series
   resources :articles do
     resources :episodes
   end
+
   
 end

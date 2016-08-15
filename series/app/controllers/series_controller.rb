@@ -51,6 +51,33 @@ class SeriesController < ApplicationController
 
   end
 
+  def sort_by_globalweight
+
+    @serie = Serie.order("global_weight DESC").limit(5)
+    respond_to do |format|
+      format.json { render json: @serie}
+    end
+
+  end
+
+  def sort_by_featuredweight
+
+    @serie = Serie.order("featured_weight DESC").limit(5)
+    respond_to do |format|
+      format.json { render json: @serie}
+    end
+
+  end
+
+  def get_all_series
+
+    @serie = Serie.all
+    respond_to do |format|
+      format.json { render json: @serie}
+    end
+    
+  end
+
 	private
 
 		def serie_params
