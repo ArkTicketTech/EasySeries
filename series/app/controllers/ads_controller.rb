@@ -55,6 +55,16 @@ class AdsController < ApplicationController
 
   end
 
+  def get_ad_info
+
+  	@ad = Ad.first
+  	respond_to do |format|
+  		format.html 
+	  	format.json {render :json => @ad}
+  	end
+  	
+  end
+
 	private
 
 		def ad_params
