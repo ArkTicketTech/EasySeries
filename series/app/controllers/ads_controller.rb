@@ -62,6 +62,13 @@ class AdsController < ApplicationController
   		format.html 
 	  	format.json {render :json => @ad}
   	end
+
+  end
+
+  def add_play_time
+
+  	@ad = Ad.find(params[:id])
+
   	
   end
 

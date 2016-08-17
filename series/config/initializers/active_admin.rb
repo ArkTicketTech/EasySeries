@@ -54,7 +54,7 @@ ActiveAdmin.setup do |config|
   #
   # This setting changes the method which Active Admin calls
   # within the application controller.
-  config.authentication_method = :authenticate_episode!
+  config.authentication_method = :authenticate_admin_user!
 
   # == User Authorization
   #
@@ -86,7 +86,7 @@ ActiveAdmin.setup do |config|
   #
   # This setting changes the method which Active Admin calls
   # (within the application controller) to return the currently logged in user.
-  config.current_user_method = :current_episode
+  config.current_user_method = :current_admin_user
 
   # == Logging Out
   #
@@ -98,7 +98,7 @@ ActiveAdmin.setup do |config|
   # will call the method to return the path.
   #
   # Default:
-  config.logout_link_path = :destroy_episode_session_path
+  config.logout_link_path = :destroy_admin_user_session_path
 
   # This setting changes the http method used when rendering the
   # link. For example :get, :delete, :put, etc..
@@ -146,9 +146,7 @@ ActiveAdmin.setup do |config|
   # Active Admin resources and pages from here.
   #
   # config.before_filter :do_something_awesome
-  config.before_filter do
-    params.permit!
-  end
+
   # == Localize Date/Time Format
   #
   # Set the localize format to display dates and times.
