@@ -65,6 +65,17 @@ class AdsController < ApplicationController
 
   end
 
+  # def upload_img
+
+  #   @ad = Ad.find(params[:ad_id])
+
+  #   respond_to do |format|
+  #     format.html 
+  #     format.json {render :json => @ad}
+  #   end
+    
+  # end
+
 	private
 
 		def ad_params
