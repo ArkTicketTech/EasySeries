@@ -65,13 +65,6 @@ class AdsController < ApplicationController
 
   end
 
-  def add_play_time
-
-  	@ad = Ad.find(params[:id])
-
-  	
-  end
-
 	private
 
 		def ad_params

@@ -10,4 +10,18 @@ class EpisodesController < ApplicationController
 
   end
 
+  def add_playtime
+
+  	@episode = Episode.find(params[:episode_id])
+  	@serie = Serie.find(@episode.serie_id)
+
+  	@serie.increment!(:playtime)
+  	@episode.increment!(:playtime)
+
+		respond_to do |format|
+      format.json { render json: @serie}
+    end  	
+
+  end
+
 end
