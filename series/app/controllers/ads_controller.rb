@@ -62,7 +62,7 @@ class AdsController < ApplicationController
   		format.html 
 	  	format.json {render :json => @ad}
   	end
-  	
+
   end
 
 	private

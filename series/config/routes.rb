@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :episodes, ActiveAdmin::Devise.config
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
@@ -62,6 +61,7 @@ Rails.application.routes.draw do
   get '/series/sort_by_featuredweight' => 'series#sort_by_featuredweight'
   get '/series/get_all' => 'series#get_all_series'
   get '/episodes_of_serie/:serie_id' => 'episodes#episodes_of_serie'
+  get '/episodes/add_playtime/:episode_id' => 'episodes#add_playtime'
   resources :ads
   resources :series
   resources :articles do
