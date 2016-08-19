@@ -62,6 +62,7 @@ Rails.application.routes.draw do
   get '/series/get_all' => 'series#get_all_series'
   get '/episodes_of_serie/:serie_id' => 'episodes#episodes_of_serie'
   get '/episodes/add_playtime/:episode_id' => 'episodes#add_playtime'
+  # post '/admin/ads/:id/upload_img' => 'admin/ads#upload_img'
   # get '/ads/upload_img/:ad_id' => 'ads#upload_img'
   resources :ads
   resources :series
