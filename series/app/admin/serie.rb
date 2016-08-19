@@ -24,6 +24,7 @@ ActiveAdmin.register Serie do
 			file = File.join("public/user_file/series_img", params[:id])
 			FileUtils.cp tmp.path, file
 			Serie.update(params[:id], :img => "user_file/series_img/"+params[:id])
+			redirect_to "/admin/series"
 		end
 	end
 

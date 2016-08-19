@@ -20,6 +20,7 @@ ActiveAdmin.register Ad do
 			file = File.join("public/user_file/ads_img", tmp.original_filename)
 			FileUtils.cp tmp.path, file
 			Ad.update(params[:id], :img => "user_file/ads_img/"+tmp.original_filename)
+			redirect_to "/admin/ads"
 		end
 	end
 
